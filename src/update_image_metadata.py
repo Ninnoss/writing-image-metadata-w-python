@@ -18,7 +18,7 @@ def update_image_metadata(directory):
     png_files = 0
     video_files = 0
 
-    # Define video file extensions for tracking
+    # Define video file extensions for tracking. Video files are not processed as they already maintain their metadata. This is used only for counting the total number of video files in the directory.
     video_extensions = (".mp4", ".mov", ".avi", ".mkv")
 
     # Iterate through all files in the given directory
