@@ -48,7 +48,9 @@ def convert_images_to_webp(input_dir, output_dir):
                 max_width, max_height = 1920, 1080
                 img.thumbnail((max_width, max_height))
 
-                # Lossy conversion (optimized for web, smaller size) Modify the quality parameter to adjust the compression level
+                """
+                Lossy conversion (optimized for web, smaller size) Modify the quality parameter to adjust the compression level. Lower values reduce size but may introduce noticeable artifacts, while higher values increase size with diminishing returns in quality.
+                """
                 img.save(output_file, format="WEBP", quality=75, optimize=True)
 
                 processed_files += 1  # Increment processed files counter
